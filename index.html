@@ -1,464 +1,997 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpenClaw Setup Service - Running in 1 Hour | No Hardware</title>
-    <meta name="description" content="Get OpenClaw running in the cloud in 1 hour. No Mac Mini, no installs, no technical knowledge required. $499 guided setup service for non-technical users.">
-    <meta name="keywords" content="OpenClaw setup, OpenClaw installation, OpenClaw cloud, OpenClaw help, AI agent setup, no Mac Mini, OpenClaw service">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Skip the Mac Mini - OpenClaw Cloud Setup Service">
-    <meta property="og:description" content="Get OpenClaw running in 1 hour with no hardware purchases. Professional setup service for non-technical users.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://howtosetupclaw.com">
-    <meta property="og:image" content="https://howtosetupclaw.com/og-image.png">
-    
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="OpenClaw Setup Service - No Hardware Required">
-    <meta name="twitter:description" content="Professional OpenClaw cloud setup in 1 hour. Skip the Mac Mini and technical headaches.">
-    <meta name="twitter:image" content="https://howtosetupclaw.com/twitter-image.png">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://howtosetupclaw.com">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    
-    <!-- Structured Data for FAQ -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Do I need to install anything before the call?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No installations needed. OpenClaw runs in the cloud through your web browser. Just bring a web browser and Zoom - we handle everything else."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I install OpenClaw without a Mac Mini?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "You don't need a Mac Mini at all. OpenClaw runs perfectly in the cloud through any web browser. Our guided setup gets you running in one hour with zero hardware purchases."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What's the fastest way to get OpenClaw running?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Skip the hardware and installation entirely. Cloud setup takes about an hour vs weeks of local troubleshooting. You leave with OpenClaw fully operational."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Why is OpenClaw setup so complicated for beginners?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Most tutorials assume you're a developer. That's why this service exists - we handle the technical complexity so non-technical users can get straight to using their AI agent."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can OpenClaw work without installing anything locally?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Absolutely. Cloud-based OpenClaw is actually more reliable than local installations. It runs 24/7 without your computer being on, works from any device, and never has hardware conflicts."
-          }
-        }
-      ]
-    }
-    </script>
-    
-    <!-- Service Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "OpenClaw Cloud Setup Service",
-      "description": "Professional OpenClaw installation and setup service. Get OpenClaw running in the cloud in 1 hour with no hardware required.",
-      "provider": {
-        "@type": "Organization",
-        "name": "HowToSetupClaw"
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "499",
-        "priceCurrency": "USD",
-        "description": "One-time setup service including 1-hour guided session and reference guide"
-      }
-    }
-    </script>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>How to Setup OpenClaw — Get Up & Riding in 1 Hour | HowToSetupClaw.com</title>
 
-    <style>
-        /* Original site styles preserved - would need to extract from live site */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #fff;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        header {
-            background: #000;
-            color: #fff;
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        .nav-cta {
-            background: #ff4500;
-            color: #fff;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            min-height: 48px;
-            display: inline-flex;
-            align-items: center;
-        }
-        
-        .hero {
-            background: linear-gradient(135deg, #000 0%, #333 100%);
-            color: #fff;
-            padding: 4rem 0;
-            text-align: center;
-        }
-        
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            font-weight: 900;
-        }
-        
-        .hero .subtitle {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-        
-        .cta-button {
-            background: #ff4500;
-            color: #fff;
-            padding: 16px 32px;
-            font-size: 1.125rem;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            display: inline-block;
-            min-height: 48px;
-            line-height: 1.2;
-        }
-        
-        .section {
-            padding: 4rem 0;
-        }
-        
-        .section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-        
-        .comparison {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-        
-        .comparison-box {
-            padding: 2rem;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            background: #f9f9f9;
-        }
-        
-        .comparison-box.new-way {
-            border-color: #28a745;
-            background: #f8fff9;
-        }
-        
-        .comparison-box h3 {
-            color: #ff4500;
-            margin-bottom: 1rem;
-        }
-        
-        .faq {
-            background: #f8f9fa;
-        }
-        
-        .faq-item {
-            border-bottom: 1px solid #ddd;
-            padding: 1rem 0;
-        }
-        
-        .faq-question {
-            font-weight: bold;
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-            cursor: pointer;
-        }
-        
-        .faq-answer {
-            color: #666;
-        }
-        
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .comparison {
-                grid-template-columns: 1fr;
-            }
-            
-            .cta-button, .nav-cta {
-                min-height: 48px;
-                padding: 16px 24px;
-                font-size: 1rem;
-            }
-        }
-        
-        @media (max-width: 375px) {
-            .container {
-                padding: 0 16px;
-            }
-            
-            .hero {
-                padding: 2rem 0;
-            }
-            
-            .hero h1 {
-                font-size: 1.75rem;
-            }
-            
-            .cta-button {
-                width: 100%;
-                text-align: center;
-                padding: 18px 20px;
-            }
-        }
-    </style>
+ <!-- Primary SEO -->
+ <meta name="description" content="Stuck on OpenClaw setup? Skip the frustration, the wasted hours, and the hardware you don't need. Get OpenClaw running in the cloud in 1 hour — no local machine, no installs, no tech background required. Live 1-on-1 walkthrough for $499." />
+ <meta name="keywords" content="how to setup OpenClaw, OpenClaw setup guide 2026, OpenClaw cloud setup, OpenClaw no install, OpenClaw for beginners, OpenClaw tutorial, OpenClaw help, setup OpenClaw without local machine, OpenClaw non-technical, run OpenClaw cloud, OpenClaw setup easy, OpenClaw personal assistant setup, OpenClaw business automation, OpenClaw for entrepreneurs, OpenClaw without Mac Mini, OpenClaw AI agent setup" />
+ <meta name="author" content="HowToSetupClaw.com" />
+ <meta name="robots" content="index, follow" />
+ <link rel="canonical" href="https://howtosetupclaw.com" />
+
+ <!-- Open Graph / Social -->
+ <meta property="og:type" content="website" />
+ <meta property="og:url" content="https://howtosetupclaw.com" />
+ <meta property="og:title" content="How to Setup OpenClaw — Get Up & Riding in 1 Hour" />
+ <meta property="og:description" content="Stop standing. Start riding. Get OpenClaw fully running in the cloud in 1 hour — no local machine, no Node.js, no Docker. Live 1-on-1 guided walkthrough for $499." />
+ <meta property="og:site_name" content="HowToSetupClaw.com" />
+
+ <!-- Twitter Card -->
+ <meta name="twitter:card" content="summary_large_image" />
+ <meta name="twitter:title" content="How to Setup OpenClaw — Get Up & Riding in 1 Hour" />
+ <meta name="twitter:description" content="Stop standing. Start riding. Get OpenClaw fully running in the cloud in 1 hour — no local machine, no installs. Live 1-on-1 walkthrough for $499." />
+ <meta name="twitter:site" content="@howtosetupclaw" />
+
+ <!-- Schema.org Structured Data — Service -->
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "Service",
+ "name": "OpenClaw Setup Walkthrough",
+ "description": "Live 1-on-1 guided setup walkthrough to get OpenClaw running in the cloud in 1 hour. No local machine, no installs, no technical knowledge required.",
+ "provider": {
+ "@type": "Organization",
+ "name": "HowToSetupClaw.com LLC",
+ "url": "https://howtosetupclaw.com",
+ "email": "questions@howtosetupclaw.com"
+ },
+ "offers": {
+ "@type": "Offer",
+ "price": "499",
+ "priceCurrency": "USD",
+ "availability": "https://schema.org/LimitedAvailability",
+ "url": "https://howtosetupclaw.com"
+ },
+ "serviceType": "AI Software Setup",
+ "areaServed": "Worldwide",
+ "audience": {
+ "@type": "Audience",
+ "audienceType": "Non-technical business owners, entrepreneurs, and personal users who want OpenClaw running without the complexity"
+ }
+ }
+ </script>
+
+ <!-- Schema.org FAQ -->
+ <script type="application/ld+json">
+ {
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "Do I need to install anything to set up OpenClaw?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "No. OpenClaw can run 100% in the cloud. All you need is a web browser and a Zoom link — no downloads, no Node.js, no Docker, no local machine required."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Can I use OpenClaw without a Mac Mini or local machine?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Yes. Most people don't know this, but OpenClaw can run entirely in the cloud. You do not need to buy a Mac Mini or any dedicated hardware. We show you exactly how during the walkthrough."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Is OpenClaw for personal use or business use?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Both. OpenClaw works as a personal AI assistant managing your inbox, calendar, and daily tasks — and as a business tool for lead generation, automation, marketing, and running entire workflows via WhatsApp, Telegram, Slack, or Discord."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "How long does it take to set up OpenClaw?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "With our live guided walkthrough, most people are fully up and running in under 1 hour. Without guidance, non-technical users typically spend days or weeks trying to get it working locally."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Why does OpenClaw setup cost $499?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "The real cost of doing it alone includes over $3,000 in unnecessary hardware, hours or weeks of wasted time, costly mistakes, and tokens burned without knowing what they are. $499 gets you riding in one hour and skips all of that."
+ }
+ }
+ ]
+ }
+ </script>
+ <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+ <style>
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+ :root {
+ --black: #0a0a0a;
+ --off-white: #f4f1eb;
+ --cream: #ede9e0;
+ --accent: #e8531a;
+ --accent-dark: #c2400e;
+ --muted: #8a8478;
+ --card-bg: #ffffff;
+ }
+
+ html { scroll-behavior: smooth; }
+
+ body {
+ background: var(--off-white);
+ color: var(--black);
+ font-family: 'DM Sans', sans-serif;
+ font-size: 16px;
+ line-height: 1.6;
+ overflow-x: hidden;
+ }
+
+ /* ── NOISE TEXTURE OVERLAY ── */
+ body::before {
+ content: '';
+ position: fixed;
+ inset: 0;
+ background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+ pointer-events: none;
+ z-index: 999;
+ opacity: 0.4;
+ }
+
+ /* ── NAV ── */
+ nav {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 20px 48px;
+ border-bottom: 1px solid rgba(0,0,0,0.08);
+ position: sticky;
+ top: 0;
+ background: var(--off-white);
+ z-index: 100;
+ }
+ .nav-logo {
+ font-family: 'Bebas Neue', sans-serif;
+ font-size: 22px;
+ letter-spacing: 2px;
+ color: var(--black);
+ }
+ .nav-logo span { color: var(--accent); }
+ .nav-cta {
+ background: var(--accent);
+ color: white;
+ border: none;
+ padding: 10px 24px;
+ font-family: 'DM Sans', sans-serif;
+ font-size: 14px;
+ font-weight: 600;
+ cursor: pointer;
+ letter-spacing: 0.5px;
+ transition: background 0.2s;
+ text-decoration: none;
+ }
+ .nav-cta:hover { background: var(--accent-dark); }
+
+ /* ── HERO ── */
+ .hero {
+ max-width: 1100px;
+ margin: 0 auto;
+ padding: 80px 48px 60px;
+ display: grid;
+ grid-template-columns: 1fr 400px;
+ gap: 60px;
+ align-items: center;
+ opacity: 0;
+ animation: fadeUp 0.8s 0.1s forwards;
+ }
+ @keyframes fadeUp {
+ from { opacity: 0; transform: translateY(24px); }
+ to { opacity: 1; transform: translateY(0); }
+ }
+
+ .eyebrow {
+ display: inline-flex;
+ align-items: center;
+ gap: 8px;
+ font-family: 'DM Mono', monospace;
+ font-size: 12px;
+ letter-spacing: 2px;
+ text-transform: uppercase;
+ color: var(--accent);
+ margin-bottom: 20px;
+ }
+ .eyebrow::before {
+ content: '';
+ display: block;
+ width: 24px;
+ height: 2px;
+ background: var(--accent);
+ }
+
+ h1 {
+ font-family: 'Bebas Neue', sans-serif;
+ font-size: clamp(60px, 7vw, 96px);
+ line-height: 0.95;
+ letter-spacing: 1px;
+ color: var(--black);
+ margin-bottom: 24px;
+ }
+ h1 em {
+ color: var(--accent);
+ font-style: normal;
+ }
+
+ .hero-sub {
+ font-size: 18px;
+ color: #444;
+ font-weight: 400;
+ max-width: 460px;
+ line-height: 1.7;
+ margin-bottom: 36px;
+ }
+
+ .hero-actions {
+ display: flex;
+ gap: 16px;
+ align-items: center;
+ flex-wrap: wrap;
+ }
+ .btn-primary {
+ background: var(--accent);
+ color: white;
+ text-decoration: none;
+ padding: 16px 36px;
+ font-size: 16px;
+ font-weight: 600;
+ letter-spacing: 0.3px;
+ transition: background 0.2s, transform 0.15s;
+ display: inline-block;
+ }
+ .btn-primary:hover {
+ background: var(--accent-dark);
+ transform: translateY(-1px);
+ }
+ .hero-note {
+ font-size: 13px;
+ color: var(--muted);
+ font-style: italic;
+ }
+
+ /* ── HERO CARD ── */
+ .hero-card {
+ background: var(--black);
+ color: white;
+ padding: 40px 36px;
+ position: relative;
+ overflow: hidden;
+ }
+ .hero-card::before {
+ content: '';
+ position: absolute;
+ top: -40px; right: -40px;
+ width: 180px; height: 180px;
+ border-radius: 50%;
+ background: var(--accent);
+ opacity: 0.12;
+ }
+ .price-label {
+ font-family: 'DM Mono', monospace;
+ font-size: 11px;
+ letter-spacing: 2px;
+ text-transform: uppercase;
+ color: var(--accent);
+ margin-bottom: 8px;
+ }
+ .price {
+ font-family: 'Bebas Neue', sans-serif;
+ font-size: 72px;
+ line-height: 1;
+ margin-bottom: 4px;
+ }
+ .price-period {
+ font-size: 14px;
+ color: rgba(255,255,255,0.5);
+ margin-bottom: 28px;
+ }
+ .card-features {
+ list-style: none;
+ display: flex;
+ flex-direction: column;
+ gap: 12px;
+ margin-bottom: 32px;
+ }
+ .card-features li {
+ display: flex;
+ align-items: flex-start;
+ gap: 10px;
+ font-size: 14px;
+ color: rgba(255,255,255,0.85);
+ line-height: 1.5;
+ }
+ .card-features li::before {
+ content: '→';
+ color: var(--accent);
+ font-weight: bold;
+ flex-shrink: 0;
+ margin-top: 1px;
+ }
+ .btn-white {
+ display: block;
+ text-align: center;
+ background: white;
+ color: var(--black);
+ text-decoration: none;
+ padding: 14px 24px;
+ font-size: 15px;
+ font-weight: 700;
+ letter-spacing: 0.3px;
+ transition: background 0.2s;
+ }
+ .btn-white:hover { background: var(--cream); }
+
+ /* ── TRUST BAR ── */
+ .trust-bar {
+ background: var(--cream);
+ border-top: 1px solid rgba(0,0,0,0.07);
+ border-bottom: 1px solid rgba(0,0,0,0.07);
+ padding: 18px 48px;
+ display: flex;
+ justify-content: center;
+ gap: 48px;
+ flex-wrap: wrap;
+ opacity: 0;
+ animation: fadeUp 0.8s 0.4s forwards;
+ }
+ .trust-item {
+ display: flex;
+ align-items: center;
+ gap: 8px;
+ font-size: 13px;
+ font-weight: 500;
+ color: var(--muted);
+ letter-spacing: 0.3px;
+ }
+ .trust-item span { font-size: 16px; }
+
+ /* ── SECTION ── */
+ section {
+ max-width: 1100px;
+ margin: 0 auto;
+ padding: 80px 48px;
+ }
+ .section-label {
+ font-family: 'DM Mono', monospace;
+ font-size: 11px;
+ letter-spacing: 3px;
+ text-transform: uppercase;
+ color: var(--accent);
+ margin-bottom: 16px;
+ }
+ .section-title {
+ font-family: 'Bebas Neue', sans-serif;
+ font-size: clamp(36px, 4vw, 52px);
+ line-height: 1.0;
+ margin-bottom: 40px;
+ }
+
+ /* ── PROBLEM ── */
+ .problem-grid {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 2px;
+ }
+ .problem-card {
+ background: var(--black);
+ color: white;
+ padding: 36px 30px;
+ position: relative;
+ opacity: 0;
+ animation: fadeUp 0.7s forwards;
+ }
+ .problem-card:nth-child(1) { animation-delay: 0.1s; }
+ .problem-card:nth-child(2) { animation-delay: 0.2s; }
+ .problem-card:nth-child(3) { animation-delay: 0.3s; }
+ .problem-num {
+ font-family: 'Bebas Neue', sans-serif;
+ font-size: 64px;
+ color: rgba(255,255,255,0.06);
+ position: absolute;
+ top: 16px; right: 20px;
+ line-height: 1;
+ }
+ .problem-card h3 {
+ font-size: 18px;
+ font-weight: 600;
+ margin-bottom: 10px;
+ line-height: 1.3;
+ }
+ .problem-card p {
+ font-size: 14px;
+ color: rgba(255,255,255,0.6);
+ line-height: 1.6;
+ }
+
+ /* ── WHAT YOU GET ── */
+ .what-grid {
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ gap: 24px;
+ }
+ .what-item {
+ border: 1px solid rgba(0,0,0,0.1);
+ padding: 32px 28px;
+ background: white;
+ display: flex;
+ gap: 20px;
+ align-items: flex-start;
+ transition: border-color 0.2s, transform 0.2s;
+ }
+ .what-item:hover {
+ border-color: var(--accent);
+ transform: translateY(-2px);
+ }
+ .what-icon {
+ width: 44px; height: 44px;
+ background: var(--accent);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 20px;
+ flex-shrink: 0;
+ }
+ .what-item h3 {
+ font-size: 16px;
+ font-weight: 600;
+ margin-bottom: 6px;
+ }
+ .what-item p {
+ font-size: 14px;
+ color: #666;
+ line-height: 1.6;
+ }
+
+ /* ── HOW IT WORKS ── */
+ .how-section {
+ background: var(--black);
+ color: white;
+ padding: 80px 0;
+ }
+ .how-inner {
+ max-width: 1100px;
+ margin: 0 auto;
+ padding: 0 48px;
+ }
+ .how-section .section-title { color: white; }
+ .steps {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 0;
+ margin-top: 48px;
+ position: relative;
+ }
+ .steps::before {
+ content: '';
+ position: absolute;
+ top: 28px;
+ left: 80px; right: 80px;
+ height: 1px;
+ background: rgba(255,255,255,0.12);
+ }
+ .step {
+ padding: 0 24px;
+ position: relative;
+ z-index: 1;
+ }
+ .step-num {
+ width: 56px; height: 56px;
+ background: var(--accent);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-family: 'Bebas Neue', sans-serif;
+ font-size: 28px;
+ margin-bottom: 20px;
+ }
+ .step h3 {
+ font-size: 18px;
+ font-weight: 600;
+ margin-bottom: 10px;
+ }
+ .step p {
+ font-size: 14px;
+ color: rgba(255,255,255,0.55);
+ line-height: 1.7;
+ }
+
+ /* ── TESTIMONIAL / CALLOUT ── */
+ .callout {
+ background: var(--accent);
+ padding: 64px 80px;
+ text-align: center;
+ position: relative;
+ overflow: hidden;
+ }
+ .callout::before {
+ content: '"';
+ font-family: 'Bebas Neue', sans-serif;
+ font-size: 320px;
+ color: rgba(0,0,0,0.08);
+ position: absolute;
+ top: -60px; left: 20px;
+ line-height: 1;
+ pointer-events: none;
+ }
+ .callout blockquote {
+ font-size: clamp(22px, 3vw, 30px);
+ font-weight: 500;
+ color: white;
+ line-height: 1.5;
+ max-width: 700px;
+ margin: 0 auto 20px;
+ position: relative;
+ z-index: 1;
+ }
+ .callout cite {
+ font-size: 14px;
+ color: rgba(255,255,255,0.7);
+ font-style: normal;
+ }
+
+ /* ── FAQ ── */
+ .faq-list {
+ display: flex;
+ flex-direction: column;
+ gap: 2px;
+ }
+ .faq-item {
+ background: white;
+ border: 1px solid rgba(0,0,0,0.07);
+ }
+ .faq-q {
+ padding: 22px 28px;
+ font-size: 16px;
+ font-weight: 600;
+ cursor: pointer;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ user-select: none;
+ }
+ .faq-q::after {
+ content: '+';
+ font-size: 22px;
+ color: var(--accent);
+ font-weight: 300;
+ transition: transform 0.2s;
+ }
+ .faq-item.open .faq-q::after { transform: rotate(45deg); }
+ .faq-a {
+ display: none;
+ padding: 0 28px 22px;
+ font-size: 15px;
+ color: #555;
+ line-height: 1.7;
+ }
+ .faq-item.open .faq-a { display: block; }
+
+ /* ── FINAL CTA ── */
+ .final-cta {
+ text-align: center;
+ padding: 100px 48px;
+ max-width: 700px;
+ margin: 0 auto;
+ }
+ .final-cta h2 {
+ font-family: 'Bebas Neue', sans-serif;
+ font-size: clamp(48px, 6vw, 72px);
+ line-height: 1.0;
+ margin-bottom: 20px;
+ }
+ .final-cta h2 em {
+ color: var(--accent);
+ font-style: normal;
+ }
+ .final-cta p {
+ font-size: 17px;
+ color: #555;
+ margin-bottom: 36px;
+ }
+ .price-tag {
+ display: inline-block;
+ background: var(--black);
+ color: white;
+ font-family: 'Bebas Neue', sans-serif;
+ font-size: 28px;
+ padding: 8px 24px;
+ margin-bottom: 32px;
+ letter-spacing: 1px;
+ }
+
+ /* ── FOOTER ── */
+ footer {
+ border-top: 1px solid rgba(0,0,0,0.08);
+ padding: 28px 48px;
+ text-align: center;
+ font-size: 13px;
+ color: var(--muted);
+ }
+
+ /* ── RESPONSIVE ── */
+ @media (max-width: 900px) {
+ nav { padding: 16px 24px; }
+ .hero { grid-template-columns: 1fr; padding: 48px 24px 40px; gap: 40px; }
+ .trust-bar { padding: 16px 24px; gap: 24px; }
+ section { padding: 60px 24px; }
+ .problem-grid { grid-template-columns: 1fr; }
+ .what-grid { grid-template-columns: 1fr; }
+ .steps { grid-template-columns: 1fr; gap: 32px; }
+ .steps::before { display: none; }
+ .callout { padding: 48px 28px; }
+ .how-inner { padding: 0 24px; }
+ .final-cta { padding: 60px 24px; }
+ footer { padding: 24px; }
+ }
+ </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <nav style="display: flex; justify-content: space-between; align-items: center;">
-                <div style="font-size: 1.5rem; font-weight: bold;">How to SetupOpenClaw</div>
-                <a href="#book" class="nav-cta">Book Your Session →</a>
-            </nav>
-        </div>
-    </header>
 
-    <section class="hero">
-        <div class="container">
-            <h1>How to SetupOpenClaw</h1>
-            <div class="subtitle">The Easiest Way to Get OpenClaw Running - No Mac Mini Required</div>
-            <p style="font-size: 1.5rem; margin: 2rem 0;">Once-in-a-Generation Disruption</p>
-            <h2 style="font-size: 3rem; font-weight: 900; margin: 1rem 0;">STOP STANDING. START RIDING.</h2>
-            <p style="font-size: 1.25rem; margin: 2rem 0;">Everyone else is still trying to build the bike. For $499 I'll get you on it and riding — OpenClaw fully running in the cloud, no local machine, no installs, in one hour.</p>
-            <a href="#book" class="cta-button">Get Riding for $499 →</a>
-            <p style="margin-top: 1rem; opacity: 0.8;">Limited spots available each week</p>
-        </div>
-    </section>
+ <nav>
+ <div class="nav-logo">How to Setup<span>OpenClaw</span></div>
+ <a href="#book" class="nav-cta">Book Your Session →</a>
+ </nav>
 
-    <section class="section">
-        <div class="container">
-            <h2>Skip the Hardware Store</h2>
-            <div class="comparison">
-                <div class="comparison-box old-way">
-                    <h3>The Hard Way</h3>
-                    <ul>
-                        <li>$500-3000 Mac Mini purchase</li>
-                        <li>Weeks of setup troubleshooting</li>
-                        <li>Hardware maintenance issues</li>
-                        <li>Only works on that one machine</li>
-                        <li>Breaks when hardware fails</li>
-                    </ul>
-                </div>
-                <div class="comparison-box new-way">
-                    <h3>The Smart Way</h3>
-                    <ul>
-                        <li>$499 one-time setup service</li>
-                        <li>1 hour guided installation</li>
-                        <li>Works on any device, anywhere</li>
-                        <li>24/7 uptime, never breaks</li>
-                        <li>Access from phone, laptop, tablet</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+ <!-- HERO -->
+ <div class="hero">
+ <div>
+ <div class="eyebrow">Once-in-a-Generation Disruption</div>
+ <h1>STOP STANDING.<br><em>START</em><br>RIDING.</h1>
+ <p class="hero-sub">
+ Everyone else is still trying to build the bike. For $499 I'll get you on it and riding — OpenClaw fully running in the cloud, no local machine, no installs, in one hour.
+ </p>
+ <div class="hero-actions">
+ <a href="#book" class="btn-primary">Get Riding for $499 →</a>
+ <span class="hero-note">Limited spots available each week</span>
+ </div>
+ </div>
 
-    <section class="section">
-        <div class="container">
-            <h2>Stuck on OpenClaw Setup? You're Not Alone</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0;">
-                <div>
-                    <h3>01 - You watched the tutorials and videos and still feel lost</h3>
-                    <p>Generic walkthroughs assume you're a developer. You're not — and that's fine. That's exactly why this walkthrough exists.</p>
-                </div>
-                <div>
-                    <h3>02 - You didn't know you don't need a local machine</h3>
-                    <p>OpenClaw can run 100% in the cloud. No Mac Mini, no installs, no IT department. Most people never discover this until they've wasted weeks.</p>
-                </div>
-                <div>
-                    <h3>03 - You're standing there while others ride</h3>
-                    <p>This technology is already replacing functions at real companies. Every week you're not using it is a week you're falling behind. Start riding.</p>
-                </div>
-                <div>
-                    <h3>04 - You've burned hours and cash with nothing to show</h3>
-                    <p>Time lost watching videos that go nowhere. Money spent on hardware you didn't need. It adds up fast — and it's completely avoidable when you know where to start.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+ <div class="hero-card">
+ <div class="price-label">Your Investment</div>
+ <div class="price">$499</div>
+ <div class="price-period">One session · 1 hour · riding</div>
+ <ul class="card-features">
+ <li>Personalized 1-on-1 session via Zoom</li>
+ <li>We hand you the keys — you leave ready to work with your agent</li>
+ <li>No technical knowledge required</li>
+ <li>Runs in the cloud — any device, anywhere</li>
+ <li>1-page reference guide delivered after the call</li>
+ </ul>
+ <a href="#book" class="btn-white">Reserve Your Spot →</a>
+ </div>
+ </div>
 
-    <!-- Continue with existing sections... -->
-    <!-- The Disruption, For Personal Use, For Business Use, What's Included, The Process sections -->
+ <!-- TRUST BAR -->
+ <div class="trust-bar">
+ <div class="trust-item"><span>☁️</span> 100% Cloud — Nothing to Install</div>
+ <div class="trust-item"><span>⚡</span> Up & Riding in 1 Hour</div>
+ <div class="trust-item"><span>🔒</span> Private 1-on-1 Session</div>
+ <div class="trust-item"><span>🚲</span> Start Riding. Don't Stand There.</div>
+ </div>
 
-    <section class="section faq">
-        <div class="container">
-            <h2>OpenClaw Setup Questions Answered</h2>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question">Do I need to install anything before the call?</div>
-                    <div class="faq-answer">Nope. OpenClaw runs in the cloud. All you need is a web browser and a Zoom link. No downloads, no hardware purchases — that's the whole point.</div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">How do I install OpenClaw without a Mac Mini?</div>
-                    <div class="faq-answer">You don't need a Mac Mini at all. OpenClaw runs perfectly in the cloud through any web browser. Our guided setup gets you running in one hour with zero hardware purchases - just your laptop or phone and an internet connection.</div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">What's the fastest way to get OpenClaw running?</div>
-                    <div class="faq-answer">Skip the hardware and installation entirely. Cloud setup takes about an hour vs weeks of local troubleshooting. You'll leave the session with OpenClaw fully operational and a reference guide so you never get stuck.</div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">Why is OpenClaw setup so complicated for beginners?</div>
-                    <div class="faq-answer">Most tutorials assume you're a developer. That's why this service exists - we handle the technical complexity so non-technical users can get straight to using their AI agent. No command line, no configuration files, just working OpenClaw.</div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">Can OpenClaw work without installing anything locally?</div>
-                    <div class="faq-answer">Absolutely. Cloud-based OpenClaw is actually more reliable than local installations. It runs 24/7 without your computer being on, works from any device, and never has the hardware conflicts that plague local setups.</div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">Is this for personal use, business use, or both?</div>
-                    <div class="faq-answer">Both. OpenClaw works as a personal AI assistant — managing your inbox, calendar, and daily tasks — and as a business tool for lead generation, automation, content, and running entire workflows. We configure it for whichever matters most to you.</div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">I'm not technical at all — is this right for me?</div>
-                    <div class="faq-answer">Absolutely. This session is built for non-technical people. No jargon, no assumptions. I hold your hand from start to finish. You'll leave riding, not confused.</div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">How much does OpenClaw actually cost to run?</div>
-                    <div class="faq-answer">The setup service is $499 one-time. After that, OpenClaw runs on API credits that typically cost $10-50/month depending on usage. Compare that to $3000+ for hardware you don't actually need.</div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">What if I need more than an hour?</div>
-                    <div class="faq-answer">Most people are fully up and riding well within the hour. In the rare case we need a bit more time, I won't leave you hanging mid-setup.</div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">Why $499 for one hour?</div>
-                    <div class="faq-answer">Think about the real cost of doing this alone. Over $3,000 in hardware you don't even need. Hours — sometimes weeks — of your time going nowhere. Mistakes that cost hundreds if not thousands of dollars to fix. And tokens — the credits that power your AI agent — burned silently in the background without you knowing what they are or why they're disappearing. We'll teach you exactly what tokens are and how to protect them. $499 stops all of that cold. One hour, and you're riding.</div>
-                </div>
-            </div>
-        </div>
-    </section>
+ <!-- PROBLEM — up top to connect immediately with reader -->
+ <section>
+ <div class="section-label">Sound Familiar?</div>
+ <div class="section-title">STILL STANDING?<br>NOT KNOWING WHERE<br>OR HOW TO START?</div>
+ <div class="problem-grid" style="grid-template-columns: repeat(2, 1fr);">
+ <div class="problem-card">
+ <div class="problem-num">01</div>
+ <h3>You watched the tutorials and videos and still feel lost</h3>
+ <p>Generic walkthroughs assume you're a developer. You're not — and that's fine. That's exactly why this walkthrough exists.</p>
+ </div>
+ <div class="problem-card">
+ <div class="problem-num">02</div>
+ <h3>You didn't know you don't need a local machine</h3>
+ <p>OpenClaw can run 100% in the cloud. No Mac Mini, no installs, no IT department. Most people never discover this until they've wasted weeks.</p>
+ </div>
+ <div class="problem-card">
+ <div class="problem-num">03</div>
+ <h3>You're standing there while others ride</h3>
+ <p>This technology is already replacing functions at real companies. Every week you're not using it is a week you're falling behind. Start riding.</p>
+ </div>
+ <div class="problem-card">
+ <div class="problem-num">04</div>
+ <h3>You've burned hours and cash with nothing to show</h3>
+ <p>Time lost watching videos that go nowhere. Money spent on hardware you didn't need. It adds up fast — and it's completely avoidable when you know where to start.</p>
+ </div>
+ </div>
+ </section>
 
-    <section class="section" style="background: #000; color: #fff;">
-        <div class="container" style="text-align: center;">
-            <h2>DON'T STAND THERE AND MISS OUT. START RIDING.</h2>
-            <p style="font-size: 1.25rem; margin: 2rem 0;">OpenClaw is a once-in-a-lifetime disruption — for your personal life and your business. $499 gets you on the bike and riding in one hour. Cloud-based. No installs. Today.</p>
-            <div style="font-size: 2rem; font-weight: bold; margin: 2rem 0;">$499 · 1 HOUR · YOU'RE RIDING</div>
-            <a href="https://buy.stripe.com/dRm9ATeoabDVfNs12y2Ry00" class="cta-button" style="font-size: 1.25rem; margin: 2rem 0;" id="book">Start Riding Now →</a>
-            <p style="margin-top: 1rem; opacity: 0.8;">Spots are limited. Secure yours before they fill up.</p>
-        </div>
-    </section>
+ <!-- WHAT IS OPENCLAW -->
+ <section>
+ <div class="section-label">The Disruption</div>
+ <div class="section-title">THIS ISN'T ANOTHER<br>CHATBOT. IT'S A<br><em style="color:var(--accent);font-style:normal;">DIGITAL EMPLOYEE.</em></div>
+ <p style="font-size:18px;color:#444;max-width:680px;line-height:1.8;margin-bottom:48px;">OpenClaw is an AI agent that doesn't just answer questions — it actually does things. It clears your inbox, manages your calendar, browses the web, runs tasks while you sleep, and works through WhatsApp, Telegram, Slack, or Discord. People are calling it the biggest shift since ChatGPT. And most people are still standing on the sidewalk watching it go by. Don't get left behind.</p>
+ <div class="problem-grid">
+ <div class="problem-card">
+ <div class="problem-num">🤖</div>
+ <h3>It's an AI that acts, not just talks</h3>
+ <p>Unlike chatbots, OpenClaw completes full workflows — sending emails, filing tasks, researching leads, booking things — on its own, without you lifting a finger.</p>
+ </div>
+ <div class="problem-card">
+ <div class="problem-num">🧠</div>
+ <h3>It remembers everything about you</h3>
+ <p>OpenClaw builds persistent memory of your preferences, routines, and context. The longer you use it, the smarter and more personalized it gets.</p>
+ </div>
+ <div class="problem-card">
+ <div class="problem-num">⏰</div>
+ <h3>It works 24/7, even while you sleep</h3>
+ <p>Set it up once and it runs continuously in the background — monitoring, acting, alerting you only when it needs input. Like having a tireless assistant who never clocks out.</p>
+ </div>
+ </div>
+ </section>
 
-    <section class="section">
-        <div class="container" style="text-align: center;">
-            <h2>ASK BEFORE YOU BOOK</h2>
-            <p style="font-size: 1.125rem; margin-bottom: 2rem;">Not sure if this is right for you? Send a message and we'll get back to you before you commit to anything.</p>
-            
-            <form action="https://formspree.io/f/questions@howtosetupclaw.com" method="POST" style="max-width: 600px; margin: 0 auto;">
-                <div style="margin-bottom: 1rem;">
-                    <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem;">
-                </div>
-                <div style="margin-bottom: 1rem;">
-                    <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem;">
-                </div>
-                <div style="margin-bottom: 1rem;">
-                    <textarea name="message" placeholder="Your Question" rows="4" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; resize: vertical;"></textarea>
-                </div>
-                <button type="submit" class="cta-button" style="width: 100%;">Send Message</button>
-            </form>
-        </div>
-    </section>
+ <!-- PERSONAL BENEFITS -->
+ <section style="padding-top:0;">
+ <div class="section-label">For Personal Use</div>
+ <div class="section-title">YOUR LIFE,<br>ON AUTOPILOT</div>
+ <div class="what-grid">
+ <div class="what-item">
+ <div class="what-icon">📬</div>
+ <div>
+ <h3>Inbox Zero — Automatically</h3>
+ <p>OpenClaw reads, summarizes, and acts on your emails. It flags what matters and handles the rest — without you opening a single message.</p>
+ </div>
+ </div>
+ <div class="what-item">
+ <div class="what-icon">📅</div>
+ <div>
+ <h3>Calendar & Task Management</h3>
+ <p>It manages your schedule, sets reminders, and sends morning briefings — all delivered straight to your phone through WhatsApp or Telegram.</p>
+ </div>
+ </div>
+ <div class="what-item">
+ <div class="what-icon">🧳</div>
+ <div>
+ <h3>Real-World Tasks, Done For You</h3>
+ <p>Restaurant reservations, flight check-ins, price tracking, research — OpenClaw handles real-world tasks the way a personal assistant would, but at a fraction of the cost.</p>
+ </div>
+ </div>
+ <div class="what-item">
+ <div class="what-icon">📱</div>
+ <div>
+ <h3>Control Everything From Your Phone</h3>
+ <p>Text it on WhatsApp. Voice memo it on Telegram. You can manage your entire digital life from your phone without ever opening a laptop.</p>
+ </div>
+ </div>
+ </div>
+ </section>
 
-    <footer style="background: #333; color: #fff; padding: 2rem 0; text-align: center;">
-        <div class="container">
-            <p>&copy; 2026 HowToSetupClaw. Professional OpenClaw setup service.</p>
-        </div>
-    </footer>
+ <!-- BUSINESS BENEFITS -->
+ <div class="how-section">
+ <div class="how-inner">
+ <div class="section-label" style="color:var(--accent);">For Business Use</div>
+ <div class="section-title">YOUR BUSINESS,<br>WITH AN AI TEAM</div>
+ <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:40px;">
+ <div style="padding:28px 24px;border:1px solid rgba(255,255,255,0.1);">
+ <div style="font-size:28px;margin-bottom:12px;">🎯</div>
+ <h3 style="font-size:16px;font-weight:600;margin-bottom:8px;color:white;">Lead Generation on Autopilot</h3>
+ <p style="font-size:14px;color:rgba(255,255,255,0.55);line-height:1.7;">OpenClaw prospects new leads, researches contacts, and populates your CRM — running daily without you asking. Solo founders are using it to replace entire sales functions.</p>
+ </div>
+ <div style="padding:28px 24px;border:1px solid rgba(255,255,255,0.1);">
+ <div style="font-size:28px;margin-bottom:12px;">📊</div>
+ <h3 style="font-size:16px;font-weight:600;margin-bottom:8px;color:white;">Marketing & Content Intelligence</h3>
+ <p style="font-size:14px;color:rgba(255,255,255,0.55);line-height:1.7;">Monitor competitors, scan Reddit and X for pain points, summarize industry news, and generate content ideas — delivered to you every morning automatically.</p>
+ </div>
+ <div style="padding:28px 24px;border:1px solid rgba(255,255,255,0.1);">
+ <div style="font-size:28px;margin-bottom:12px;">👥</div>
+ <h3 style="font-size:16px;font-weight:600;margin-bottom:8px;color:white;">Run a Full AI Team</h3>
+ <p style="font-size:14px;color:rgba(255,255,255,0.55);line-height:1.7;">Deploy multiple specialized agents — strategy, dev, marketing, operations — all coordinated through a single Telegram group. A full team, for the cost of API calls.</p>
+ </div>
+ <div style="padding:28px 24px;border:1px solid rgba(255,255,255,0.1);">
+ <div style="font-size:28px;margin-bottom:12px;">🔗</div>
+ <h3 style="font-size:16px;font-weight:600;margin-bottom:8px;color:white;">50+ App Integrations</h3>
+ <p style="font-size:14px;color:rgba(255,255,255,0.55);line-height:1.7;">Slack, Gmail, GitHub, Notion, Spotify, smart home, Supabase and more. OpenClaw bridges your entire tool stack into one intelligent layer controlled by natural language.</p>
+ </div>
+ <div style="padding:28px 24px;border:1px solid rgba(255,255,255,0.1);">
+ <div style="font-size:28px;margin-bottom:12px;">⚡</div>
+ <h3 style="font-size:16px;font-weight:600;margin-bottom:8px;color:white;">Automate Repetitive Workflows</h3>
+ <p style="font-size:14px;color:rgba(255,255,255,0.55);line-height:1.7;">Scheduled cron tasks, automatic follow-ups, daily reports, file management — work that used to eat hours of your week now runs silently in the background.</p>
+ </div>
+ <div style="padding:28px 24px;border:1px solid rgba(255,255,255,0.1);">
+ <div style="font-size:28px;margin-bottom:12px;">🛠️</div>
+ <h3 style="font-size:16px;font-weight:600;margin-bottom:8px;color:white;">Self-Improving & Customizable</h3>
+ <p style="font-size:14px;color:rgba(255,255,255,0.55);line-height:1.7;">OpenClaw can write its own new skills and capabilities on demand. Tell it what you need — it figures out how to build it. Open-source and fully yours to customize.</p>
+ </div>
+ </div>
+ </div>
+ </div>
 
-    <script>
-        // FAQ Accordion functionality
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', () => {
-                const answer = question.nextElementSibling;
-                const isOpen = answer.style.display === 'block';
-                
-                // Close all other answers
-                document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
-                
-                // Toggle current answer
-                answer.style.display = isOpen ? 'none' : 'block';
-            });
-        });
+ <!-- WHAT YOU GET -->
+ <section style="padding-top: 0;">
+ <div class="section-label">What's Included</div>
+ <div class="section-title">EVERYTHING YOU NEED<br>TO START RIDING TODAY</div>
+ <div class="what-grid">
+ <div class="what-item">
+ <div class="what-icon">🖥️</div>
+ <div>
+ <h3>Live 1-on-1 Zoom Session</h3>
+ <p>We screen-share and walk through your specific setup together. No pre-recorded fluff — real hands-on help tailored to you.</p>
+ </div>
+ </div>
+ <div class="what-item">
+ <div class="what-icon">⚙️</div>
+ <div>
+ <h3>We Hand You the Keys</h3>
+ <p>By the end of the call OpenClaw is up, running, and yours. You leave with the engine on and ready to go — not still reading the manual.</p>
+ </div>
+ </div>
+ <div class="what-item">
+ <div class="what-icon">☁️</div>
+ <div>
+ <h3>Cloud Setup — Zero Downloads</h3>
+ <p>I'll show you how to run OpenClaw in the cloud from any browser, any device. No hardware. No Mac Mini. No IT bill.</p>
+ </div>
+ </div>
+ <div class="what-item">
+ <div class="what-icon">📄</div>
+ <div>
+ <h3>1-Page Reference Guide — Delivered After the Call</h3>
+ <p>A clean, one-page guide covering exactly what we set up together. Your personal cheat sheet so you never feel lost again — no Googling, no guessing, just refer to the page.</p>
+ </div>
+ </div>
+ </div>
+ </section>
 
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-    </script>
+ <!-- HOW IT WORKS -->
+ <div class="how-section">
+ <div class="how-inner">
+ <div class="section-label" style="color: var(--accent);">The Process</div>
+ <div class="section-title">HOW IT WORKS</div>
+ <div class="steps">
+ <div class="step">
+ <div class="step-num">1</div>
+ <h3>Book & Pay</h3>
+ <p>Pick a time that works for you, complete checkout, and get a Zoom link instantly. Takes 2 minutes.</p>
+ </div>
+ <div class="step">
+ <div class="step-num">2</div>
+ <h3>We Meet on Zoom</h3>
+ <p>Join the call on any device. I guide you through the full cloud setup of OpenClaw — step by step, live, no jargon.</p>
+ </div>
+ <div class="step">
+ <div class="step-num">3</div>
+ <h3>You're Riding</h3>
+ <p>Leave the call with OpenClaw running in your browser. No installs. No follow-up headaches. You're on the bike.</p>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- CALLOUT QUOTE -->
+ <div class="callout">
+ <blockquote>
+ "After years of AI hype, I thought nothing could faze me.
+ Then I got OpenClaw running. AI as teammate, not tool.
+ The endgame of digital employees is here."
+ </blockquote>
+ <cite>— Early OpenClaw adopter</cite>
+ </div>
+
+ <!-- FAQ -->
+ <section>
+ <div class="section-label">Questions</div>
+ <div class="section-title">FAQ</div>
+ <div class="faq-list">
+ <div class="faq-item">
+ <div class="faq-q">Do I need to install anything before the call?</div>
+ <div class="faq-a">Nope. OpenClaw runs in the cloud. All you need is a web browser and a Zoom link. No downloads, no hardware purchases — that's the whole point.</div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-q">Is this for personal use, business use, or both?</div>
+ <div class="faq-a">Both. OpenClaw works as a personal AI assistant — managing your inbox, calendar, and daily tasks — and as a business tool for lead generation, automation, content, and running entire workflows. We configure it for whichever matters most to you.</div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-q">I'm not technical at all — is this right for me?</div>
+ <div class="faq-a">Absolutely. This session is built for non-technical people. No jargon, no assumptions. I hold your hand from start to finish. You'll leave riding, not confused.</div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-q">What if I need more than an hour?</div>
+ <div class="faq-a">Most people are fully up and riding well within the hour. In the rare case we need a bit more time, I won't leave you hanging mid-setup.</div>
+ </div>
+ <div class="faq-item">
+ <div class="faq-q">Why $499 for one hour?</div>
+ <div class="faq-a">Think about the real cost of doing this alone. Over $3,000 in hardware you don't even need. Hours — sometimes weeks — of your time going nowhere. Mistakes that cost hundreds if not thousands of dollars to fix. And tokens — the credits that power your AI agent — burned silently in the background without you knowing what they are or why they're disappearing. We'll teach you exactly what tokens are and how to protect them. $499 stops all of that cold. One hour, and you're riding.</div>
+ </div>
+ </div>
+ </section>
+
+ <!-- FINAL CTA -->
+ <div id="book" style="background: var(--black); border-top: 1px solid rgba(255,255,255,0.05);">
+ <div class="final-cta" style="max-width:780px;">
+ <h2 style="color:white;">DON'T STAND THERE<br>AND MISS OUT.<br><em>START RIDING.</em></h2>
+ <p style="color:rgba(255,255,255,0.6);">OpenClaw is a once-in-a-lifetime disruption — for your personal life and your business. $499 gets you on the bike and riding in one hour. Cloud-based. No installs. Today.</p>
+ <div class="price-tag" style="background:var(--accent);">$499 · 1 HOUR · YOU'RE RIDING</div>
+ <br><br>
+ <a href="https://buy.stripe.com/dRm9ATeoabDVfNs12y2Ry00" target="_blank" class="btn-primary" style="font-size:18px;padding:18px 48px;">Start Riding Now →</a>
+ <p style="margin-top:16px;font-size:13px;color:rgba(255,255,255,0.35);">Spots are limited. Secure yours before they fill up.</p>
+ </div>
+ </div>
+
+ <!-- CONTACT FORM -->
+ <div style="background:var(--cream);border-top:1px solid rgba(0,0,0,0.07);padding:80px 48px;">
+ <div style="max-width:600px;margin:0 auto;">
+ <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:16px;">Got Questions?</div>
+ <h2 style="font-family:'Bebas Neue',sans-serif;font-size:42px;line-height:1;margin-bottom:12px;color:var(--black);">ASK BEFORE YOU BOOK</h2>
+ <p style="font-size:16px;color:#555;margin-bottom:36px;line-height:1.7;">Not sure if this is right for you? Send a message and we'll get back to you before you commit to anything.</p>
+
+ <form id="contact-form" style="display:flex;flex-direction:column;gap:16px;">
+ <input type="hidden" name="access_key" value="de0a6ad1-697c-4e5e-bfd1-d378760084a8">
+ <input type="hidden" name="subject" value="Question from HowToSetupClaw.com">
+ <input type="hidden" name="redirect" value="https://howtosetupclaw.com">
+
+ <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+ <div>
+ <label style="display:block;font-size:13px;font-weight:600;margin-bottom:6px;color:var(--black);">Your Name</label>
+ <input type="text" name="name" required placeholder="John Smith"
+ style="width:100%;padding:14px 16px;border:1px solid rgba(0,0,0,0.15);background:white;font-family:'DM Sans',sans-serif;font-size:15px;outline:none;box-sizing:border-box;">
+ </div>
+ <div>
+ <label style="display:block;font-size:13px;font-weight:600;margin-bottom:6px;color:var(--black);">Your Email</label>
+ <input type="email" name="email" required placeholder="you@example.com"
+ style="width:100%;padding:14px 16px;border:1px solid rgba(0,0,0,0.15);background:white;font-family:'DM Sans',sans-serif;font-size:15px;outline:none;box-sizing:border-box;">
+ </div>
+ </div>
+
+ <div>
+ <label style="display:block;font-size:13px;font-weight:600;margin-bottom:6px;color:var(--black);">Your Question</label>
+ <textarea name="message" required rows="4" placeholder="What would you like to know before booking?"
+ style="width:100%;padding:14px 16px;border:1px solid rgba(0,0,0,0.15);background:white;font-family:'DM Sans',sans-serif;font-size:15px;outline:none;resize:vertical;box-sizing:border-box;"></textarea>
+ </div>
+
+ <button type="submit"
+ style="background:var(--accent);color:white;border:none;padding:16px 36px;font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;cursor:pointer;transition:background 0.2s;align-self:flex-start;">
+ Send Message →
+ </button>
+
+ <div id="form-success" style="display:none;padding:16px;background:#e8f5e9;border:1px solid #a5d6a7;font-size:15px;color:#2e7d32;">
+ ✅ Message sent! We'll get back to you shortly.
+ </div>
+ </form>
+ </div>
+ </div>
+
+ <footer>
+ © 2026 HowToSetupClaw.com LLC &nbsp;·&nbsp; Questions? <a href="#contact-form" style="color:var(--accent);text-decoration:none;">Send us a message</a>
+ </footer>
+
+ <script>
+ // FAQ toggle
+ document.querySelectorAll('.faq-q').forEach(q => {
+ q.addEventListener('click', () => {
+ const item = q.parentElement;
+ const isOpen = item.classList.contains('open');
+ document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+ if (!isOpen) item.classList.add('open');
+ });
+ });
+
+ // Contact form submission via Web3Forms
+ const form = document.getElementById('contact-form');
+ if (form) {
+ form.addEventListener('submit', async function(e) {
+ e.preventDefault();
+ const formData = new FormData(form);
+ formData.set('access_key', 'de0a6ad1-697c-4e5e-bfd1-d378760084a8');
+ const response = await fetch('https://api.web3forms.com/submit', {
+ method: 'POST',
+ body: formData
+ });
+ if (response.ok) {
+ form.reset();
+ document.getElementById('form-success').style.display = 'block';
+ }
+ });
+ }
+ </script>
 </body>
 </html>
